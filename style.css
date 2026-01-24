@@ -46,7 +46,7 @@ html{
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 32px;
 }
 
 /* Typography */
@@ -74,23 +74,23 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 16px 32px;
 }
 
-.nav-brand {
-    font-size: 1.5rem;
+.nav-name {
+    font-size: 24px;
     font-weight: 700;
     color: var(--text-primary);
 }
 
-.brand-highlight {
+.name-highlight {
     color: var(--primary-color);
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 32px;
 }
 
 .nav-link {
@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     transition: var(--transition);
     position: relative;
-    padding: 0.5rem 0;
+    padding: 8px 0;
 }
 
 .nav-link::after {
@@ -320,8 +320,8 @@ body.light-mode .moon-icon {
     height: 100%;
     object-fit: cover;
     object-position: center;
-     position: relative !important;
-    transform: none !important;
+     position: relative;
+    transform: none;
 }
 
 .scroll-indicator {
@@ -473,7 +473,6 @@ section {
 }
 
 /* Skills Section */
-/* Skills Section */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -585,7 +584,7 @@ section {
 .skill-tag:hover svg {
     transform: scale(1.1);
 }
-/* Projects Section */
+
 /* Projects Section */
 .projects {
     background-color: var(--bg-darker);

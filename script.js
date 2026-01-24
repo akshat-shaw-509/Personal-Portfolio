@@ -291,36 +291,6 @@ if (nameElement) {
   setTimeout(type, 500)
 }
 
-
-// -------------------- Button click ripple effect --------------------
-// This creates a ripple circle on button click
-let buttons = document.querySelectorAll('.btn')
-
-buttons.forEach(button => {
-  button.addEventListener('click', function(e) {
-    let ripple = document.createElement('span')
-    let rect = this.getBoundingClientRect()
-
-    // Ripple size based on button size
-    let size = Math.max(rect.width, rect.height)
-
-    // Position ripple where user clicked
-    let x = e.clientX - rect.left - size / 2
-    let y = e.clientY - rect.top - size / 2
-
-    ripple.style.width = ripple.style.height = size + 'px'
-    ripple.style.left = x + 'px'
-    ripple.style.top = y + 'px'
-    ripple.classList.add('ripple')
-
-    this.appendChild(ripple)
-
-    // Remove ripple after animation ends
-    setTimeout(() => ripple.remove(), 600)
-  })
-})
-
-
 // -------------------- Project card tilt effect --------------------
 // This gives a 3D tilt feel when moving mouse over cards
 let projectCards = document.querySelectorAll('.project-card')
@@ -436,13 +406,3 @@ let debouncedScroll = debounce(() => {
 
 window.addEventListener('scroll', debouncedScroll)
 
-
-// -------------------- Simple performance log --------------------
-// Shows approx page load time in console
-if (window.performance) {
-  window.addEventListener('load', () => {
-    let perfData = window.performance.timing
-    let pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
-    console.log(`Page load time: ${pageLoadTime}ms`)
-  })
-}
